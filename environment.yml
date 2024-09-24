@@ -1,0 +1,15 @@
+name: i2k-mti
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - anndata
+  - tifffile
+  - spatialdata=0.2.2
+  - spatialdata-io
+  - spatialdata-plot
+  - napari=0.5.3
+  - napari-spatialdata=0.5.2.post1
+  - pyqt
+  - pip
