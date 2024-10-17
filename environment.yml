@@ -1,6 +1,7 @@
 name: i2k-mti
 channels:
   - conda-forge
+  - pytorch
 dependencies:
   - python=3.12
   - jupyterlab
