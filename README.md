@@ -166,7 +166,7 @@ Patterns detected by unsupervised clusters are by definition only focused on the
 If we check the different plots included in `rank_genes_groups_kmeans.jpg` file we can merge similar patterns into a super-class with a reasonable biological name. My take on the data is the following merging:
 
 ```
-class 	    ranked markers 	merged class
+class 	      ranked markers 	merged class
 0 		SMA only low             Smooth_Muscle
 1 		SMA + PCNA               Smooth_Muscle
 2 		PCNA                     Proliferative_PCNA
