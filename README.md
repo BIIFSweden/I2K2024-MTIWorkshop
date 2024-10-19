@@ -194,3 +194,5 @@ You can get this annotation done in the extracted data of the workshop, the `cel
 ```
 
 - Open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your nicely merged results!
+
+![TissUUmaps](./doc/pipex6.jpg "TissUUmaps")
