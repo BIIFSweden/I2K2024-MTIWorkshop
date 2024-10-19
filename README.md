@@ -31,7 +31,7 @@ Download/clone code from github ( https://github.com/CellProfiling/pipex ) and i
 
 Give PIPEX a try by directly running `pipexGUI.py`, a GUI should appear. The code is ready!
 
-Now create a `data` folder in your code working directory. Download the workshop data ( https://ell-vault.stanford.edu/dav/fredbn/www/I2K/pipex_data.zip ) and extract it some temporary folder. Copy all the `.tiff` files located into the extracted `data`  folder into the `data` folder in your workspace directory.
+Now create a `data` folder in your code working directory. Download the workshop data ( https://ell-vault.stanford.edu/dav/fredbn/www/I2K/pipex_data.zip ) and extract it to some temporary folder. Copy all the `.tiff` files located into the extracted `data`  folder into the `data` folder in your workspace directory.
 
 Finally, PIPEX is integrated with TissUUmaps viewer for easy interaction with the marker images and clustering results. You can install TissUUmaps from here ( https://tissuumaps.github.io/installation ). For windows users: install version 3.2.1.9 as administrator!
 
@@ -44,7 +44,7 @@ You are set to go! To run PIPEX from now on:
 Workshop data
 -------------
 
-We are going to work with a Breast tissue sample (normal donor) from the Human Protein Atlas v24 dataset, soon to be publicly available. This is one of the tissues which many of the HPA antibodies are tested on. You can explore the marker images here:
+We are going to work with a breast tissue sample (normal donor) from the Human Protein Atlas v24 dataset, soon to be publicly available. This is one of the tissues which many of the HPA antibodies are tested on. You can explore the marker images here:
 
 https://ell-vault.stanford.edu/dav/fredbn/www/I2K/viewer/viewer.html?csv=https://ell-vault.stanford.edu/dav/fredbn/www/I2K/viewer/TMA_H243_normal_tissue_breast_core2_data.csv&maxIntensity=255&pixelToMicron=0.5073077046562237&preRender=3200
 
@@ -52,14 +52,14 @@ The complete list of markers (named "complete markers" from now on) available fo
 
 `ARL13B,ATM,Bcl-2,Beta-actin,CD107a,CD11c,CD14,CD163,CD20,CD31,CD34,CD39,CD3e,CD4,CD40,CD44,CD45,CD56,CD68,CD8,Caveolin,Collagen_IV,DAPI,E-cadherin,ER,EpCam,GP100,HIF1A,HLA-A,HLA-DR,Histone_H3_pSer28,ICOS,IDO1,Keratin_5,Keratin_8-18,Ki67,PCNA,PCNT,PD-1,PD-L1,Pan-Cytokeratin,Podoplanin,SMA,SOX2,TOX,VISTA,Vimentin,b-Catenin1,iNOS`
 
-Being the tissue normal (without known disease or treatment) we are going to focus to study some regular structural and immune markers (named "analysis markers" from now on) present in the Breast:
+Being the tissue normal (without known disease or treatment) we are going to focus on studying some regular structural and immune markers (named "analysis markers" from now on) present in the breast:
 
 `CD31,CD40,CD45,CD68,CD8,Ki67,Podoplanin,PCNA,SMA`
 
 Short and very inaccurate marker explanation:
 
 ```
-SMA - Smooth Muscle Actin, structures with soft muscle present
+SMA - Smooth Muscle, structures with soft muscle present
 CD31 - Endothelial cells, general blood vessels
 Podoplanin - Lymphatic vessels
 CD45 - Hematopoietic cells, generic for most immune cells
@@ -93,9 +93,9 @@ Run PIPEX `Cell segmentation` step with the following parameters (leave the rest
 
 PIPEX will calculate the segmentation and create a `cell_data.csv` file with all markers quantified by cell. You can find the results in the generated `analysis` directory inside your `data` folder. Amongst other things, you will find:
 
-- `segmentation_data.npy` file: the labelled cell regions in numpy array format (for further computing analysis)
+- `segmentation_data.npy` file: the labelled cell regions in numpy array format (for further computing analysis).
 - `segmentation_mask_show.jpg` file: the cell segmentation mask over the first image (usually DAPI) in JPG format.
-- `cell_data.csv` file: the Flow Cytometry Standard file (as CSV) with cell segmentation metadata and all markers intensities calculated (and clustering if analysis command has been performed).
+- `cell_data.csv` file: the Flow Cytometry Standard file (as CSV) with cell segmentation metadata and all markers intensities calculated (and clustering if analysis step has been performed).
 
 
 Analysis
@@ -124,7 +124,7 @@ PIPEX will calculate normalizations and unsupervised clustering over the quantif
 - `rank_genes_groups_kmeans.jpg` file: this series of plots show the influence of the markers over each resulting cluster.
 - `show_spatial_kmeans.jpg` file: a spatial plot of the resulting cluster.
 - `cell_data_norm.csv` file: this is a mirror of the original `cell_data.csv` file but with all thresholding, normalizations and batch corrections performed over the marker columns. You can transfer what you like to the original data file or explore it separately.
-- `cell_data.csv` file has been updated with new columns, `leiden,leiden_color,kmeans,kmeans_color`, with the resulting unsupervised clustersas been performed).
+- `cell_data.csv` file has been updated with new columns, `leiden,leiden_color,kmeans,kmeans_color`, with the resulting unsupervised clusters classes.
 
 
 TissUUmaps integration
@@ -155,7 +155,7 @@ PIPEX will export the previous segmentation and clustering data into new formats
 - `cell_segmentation_geo.json` file: the GEOjson file that can be imported in QuPath as cell segmentation (and clustering if analysis command has been performed).
 - `anndata_TissUUmaps.h5ad`: TissUUmaps project file.
 
-Now you can open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your results:
+Now you can open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your results.
 
 
 Bonus: cluster annotation
@@ -166,7 +166,7 @@ Patterns detected by unsupervised clusters are by definition only focused on the
 If we check the different plots included in `rank_genes_groups_kmeans.jpg` file we can merge similar patterns into a super-class with a reasonable biological name. My take on the data is the following merging:
 
 ```
-class 	ranked markers 			 merged class
+class 	  ranked markers 			merged class
 0 		SMA only low             Smooth_Muscle
 1 		SMA + PCNA               Smooth_Muscle
 2 		PCNA                     Proliferative_PCNA
