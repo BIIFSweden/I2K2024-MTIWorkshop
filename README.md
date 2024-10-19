@@ -56,6 +56,20 @@ Being the tissue normal (without known disease or treatment) we are going to foc
 
 `CD31,CD40,CD45,CD68,CD8,Ki67,Podoplanin,PCNA,SMA`
 
+Short and very inaccurate marker explanation:
+
+```
+SMA - Smooth Muscle Actin, structures with soft muscle present
+CD31 - Endothelial cells, general blood vessels
+Podoplanin - Lymphatic vessels
+CD45 - Hematopoietic cells, generic for most immune cells
+CD8 - T-cells, described in the breast ductal lobes
+CD68 - Macrophages
+CD40 - Immune cells, studies suggesting they may be related with adipose tissue
+PCNA - Proliferative cells
+Ki67 - Proliferative cells
+```
+
 
 Segmentation
 ------------
