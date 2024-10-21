@@ -210,3 +210,30 @@ You can get this annotation done in the extracted data of the workshop, the `cel
 - Open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your nicely merged results!
 
 ![TissUUmaps](./doc/pipex6.jpg "TissUUmaps")
+
+## Spatial Analysis with SpatialData
+
+For this section you should download or clone the [this repository](https://github.com/BIIFSweden/I2K2024-MTIWorkshop).
+You can navigate to your folder of interest and then git clone the repository with the following
+
+```
+git clone git@github.com:BIIFSweden/I2K2024-MTIWorkshop.git
+```
+
+Once finished, you can navigate into the folder and create an environment from the `environment.yml` file with conda.
+
+```
+cd I2K2024-MTIWorkshop
+conda env create -f .\environment.yml
+conda activate i2k-mti
+```
+
+*Note*: If you do not have conda installed, we recommend you install [Miniforge](https://github.com/conda-forge/miniforge).
+
+After installing and activating the environment, you can start jupyter notebook (or use your favorite IDE) with this environment.
+
+```
+jupyter notebook
+```
+
+You will find the notebook inside the `notebooks` folder called spatial_analysis.ipynb and follow the instructions there (or from the presenter).
