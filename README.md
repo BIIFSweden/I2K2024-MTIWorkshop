@@ -155,7 +155,7 @@ PIPEX will export the previous segmentation and clustering data into new formats
 - `cell_segmentation_geo.json` file: the GEOjson file that can be imported in QuPath as cell segmentation (and clustering if analysis command has been performed).
 - `anndata_TissUUmaps.h5ad`: TissUUmaps project file.
 
-Now you can open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your results.
+Now you can open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your results. For installing the TissUUmaps aplication follow the [installation instructions](https://tissuumaps.github.io/installation/).
 
 
 Bonus: cluster annotation
