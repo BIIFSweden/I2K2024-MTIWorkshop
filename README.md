@@ -156,7 +156,7 @@ PIPEX will export the previous segmentation and clustering data into new formats
 - `anndata_TissUUmaps.h5ad`: TissUUmaps project file.
 
 Now you can open the `anndata_TissUUmaps.h5ad` with the TissUUmaps application and explore your results.
-To install the TissUUmaps aplication follow the instructions on [TissUUmaps website](https://tissuumaps.github.io/installation/).
+If you did not install the TissUUmaps aplication earlier you can install it from here ( https://tissuumaps.github.io/installation ). For windows users: install version 3.2.1.9 as administrator!
 
 Bonus: cluster annotation
 -------------------------
